@@ -1,4 +1,4 @@
-name = "Newb Firelight"
+name = "Newb Firelight Lite"
 version = [0, 1, 9]
 min_supported_mc_version = [1, 21, 20]
 description = '''
@@ -9,7 +9,7 @@ description = '''
 ''' # %w = patch warning, %v = version
 authors = ["JC GAMING7125","devendrn"]
 url = "https://devendrn.github.io/newb-shader/"
-uuid = "b745b8a4-d20c-4214-902e-222cd147a39b" # Use https://www.uuidgenerator.net/version4
+uuid = "7f78fde3-f4b2-4e05-b3e0-5c37cd334aae" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "LegacyCubemap", "Clouds", "EndSky", "SunMoon", "RenderChunk", "Actor"]
 
 [info] 
@@ -24,113 +24,4 @@ credits = '''
 # subpacks are arranged in left to right order
 # right-most subpack is enabled by default
 
-[[subpack]]
-define = "ROUNDED_CLOUDS"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-Rounded Clouds
-'''
 
-[[subpack]]
-define = "LOW"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-low
-'''
-
-[[subpack]]
-define = "LOW_QUALITY_MULTILAYER_CLOUDS"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-Low Quality Multiplayer clouds
-(multilayer clouds for low device)
-'''
-
-[[subpack]]
-define = "MULTILAYER_CLOUD"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-Multiplayer clouds
-(can cause lag for low device)
-'''
-
-[[subpack]]
-define = "VANILLA_CLOUDS"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-Vanilla Clouds
-'''
-
-[[subpack]]
-define = "VANILLA_MULTILAYER"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-Vanilla Multilayer
-'''
-
-
-[[subpack]]
-define = "REALISTIC_CLOUDS"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-REALISTIC_CLOUDS
-(Can cause more lag for low device)
-'''
-
-[[subpack]]
-define = "COMPLEMENTARY_REMAGINED_CLOUDS"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-§2COMPLEMENTARY_REMAGINED_CLOUDS§r
-enhance the vanilla clouds
-'''
-
-[[subpack]]
-define = "APOCALYPSE"
-materials = ["Actor","LegacyCubemap","RenderChunk","Sky","SunMoon","Clouds","EndSky"]
-description = '''
-§4Apocalypse§r
-make your game look like zombie apocalypse
-'''
-
-[[subpack]]
-define = "CHUNK_ANIM"
-materials = ["RenderChunk"]
-description = '''
-Chunk loading animation
-'''
-
-[[subpack]]
-define = "NO_WAVE_NO_FOG"
-materials = ["RenderChunk"]
-description = '''
-No fog and wave effects
-'''
-
-[[subpack]]
-define = "NO_FOG"
-materials = ["RenderChunk"]
-description = '''
-No fog effect
-'''
-
-[[subpack]]
-define = "NO_WAVE"
-materials = ["RenderChunk"]
-description = '''
-No wave effects
-'''
-
-[[subpack]]
-define = "ALWAYS_REFLECTION"
-materials = ["RenderChunk"]
-description = '''
-Always Reflection 
-'''
-
-[[subpack]]
-define = "DEFAULT"
-materials = []
-description = '''
-Default
-'''
