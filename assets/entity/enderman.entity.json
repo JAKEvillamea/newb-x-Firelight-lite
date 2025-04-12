@@ -38,8 +38,7 @@
         { "bob": "controller.animation.humanoid.bob" },
         { "base_pose": "controller.animation.enderman.base_pose" },
         { "carrying": "controller.animation.enderman.carrying" },
-        { "scary_face": "controller.animation.enderman.scary_face" },
-        { "particle.damage": "controller.animation.hit.particle" }
+        { "scary_face": "controller.animation.enderman.scary_face" }
       ],
       "render_controllers": [ "controller.render.enderman" ],
       "spawn_egg": {

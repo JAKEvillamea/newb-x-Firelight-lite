@@ -3,7 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:hoglin",
-      "materials": { "default": "entity_emissive" },
+      "materials": { "default": "spider" },
       "textures": {
         "default": "textures/entity/hoglin/hoglin"
       },
@@ -11,8 +11,8 @@
         "default": "geometry.hoglin"
       },
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 60
+        "base_color": "#C66E55",
+        "overlay_color": "#5f6464"
       },
       "scripts": {
         "pre_animation": [

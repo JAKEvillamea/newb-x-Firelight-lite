@@ -2,28 +2,6 @@
   "materials": {
     "version": "1.0.0",
     
-    "glow_armor:entity_alphablend": {
-        "+defines": [
-            "USE_EMISSIVE"
-        ],
-        "+states": [
-            "Blending",
-            "DisableCulling",
-            "DisableDepthWrite",
-            "DisableAlphaWrite"
-			]
-        },
-    
-    "glow_armor_enchanted:entity_alphatest_glint": {
-			"+states": [ "Blending", "DisableDepthWrite", "DisableAlphaWrite", "DisableCulling" ],
-			"blendSrc": "SourceAlpha",
-			"blendDst": "One"
-		},
-        
-    "leather_glow:entity_alphatest_change_color": {
-			"+defines": ["USE_EMISSIVE"]
-		},
-    
     "entity_nocull:entity": {
       "+states": [ "DissableCulling" ]
     },
@@ -67,7 +45,6 @@
     "zombie_villager_v2:entity_emissive_alpha": {
       "depthFunc": "LessEqual"
     },
-    
     "vex:entity_emissive_alpha": {},
     "warden:entity_emissive_alpha": {},
     "hoglin:entity_emissive": {},

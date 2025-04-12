@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:piglin_brute",
       "materials": {
-        "default": "entity_emissive_alpha"
+        "default": "spider"
       },
       "textures": {
         "default": "textures/entity/piglin/piglin_brute"
@@ -13,8 +13,8 @@
         "default": "geometry.piglin"
       },
       "spawn_egg": { 
-        "texture": "spawn_egg",
-        "texture_index": 61
+        "base_color": "#592A10",
+        "overlay_color": "#F9F3A4"
       },
       "scripts": {
         "pre_animation": [
@@ -58,6 +58,4 @@
       "enable_attachables": true
     }
   }
-}
-
 }

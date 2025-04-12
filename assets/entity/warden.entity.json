@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:warden",
       "materials": {
-        "default": "entity_emissive_alpha",
+        "default": "spider",
         "bioluminescent_layer": "warden_bioluminescent_layer"
       },
       "textures": {
@@ -88,8 +88,8 @@
        ],
       "enable_attachables": true,
       "spawn_egg": {
-        "texture": "spawn_egg",
-	"texture_index": 71
+        "base_color": "#0F4649",
+        "overlay_color": "#39D6E0"
       },
       "sound_effects": {
         "emerge": "mob.warden.emerge",

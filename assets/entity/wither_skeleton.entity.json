@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:wither_skeleton",
       "min_engine_version": "1.8.0",
-      "materials": { "default": "entity_emissive_alpha" },
+      "materials": { "default": "spider" },
       "textures": {
         "default": "textures/entity/skeleton/wither_skeleton"
       },

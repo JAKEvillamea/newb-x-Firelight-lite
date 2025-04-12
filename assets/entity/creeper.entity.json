@@ -5,8 +5,8 @@
       "identifier": "minecraft:creeper",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "entity_emissive",
-        "charged": "entity_emissive_alpha"
+        "default": "spider",
+        "charged": "charged_creeper"
       },
       "textures": {
         "default": "textures/entity/creeper/creeper",

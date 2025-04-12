@@ -1,22 +1,27 @@
-name = "Newb Firelight Lite"
-version = [0, 2, 0]
+name = "Newb Firelight lite v0.2.1"
+version = [0, 2, 1]
 min_supported_mc_version = [1, 21, 20]
 description = '''
 §c%w
-§7- An enchanced vanilla shader for Minecraft!
+§7- A shader for Minecraft!
+required game brightness to 0
 %v
 §3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
-authors = ["JC GAMING7125","devendrn"]
+authors = ["JC_GAMING7125"]
 url = "https://devendrn.github.io/newb-shader/"
-uuid = "7f78fde3-f4b2-4e05-b3e0-5c37cd334aae" # Use https://www.uuidgenerator.net/version4
-materials = ["Sky", "LegacyCubemap", "Clouds", "EndSky", "SunMoon", "RenderChunk", "Actor"]
+uuid = "f05510f0-0cfc-4c53-8146-8967ccdc5008" # Use https://www.uuidgenerator.net/version4
+materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
 copyright = '''
-Copyright (c) %a
+Copyright © 2024 %a, and "Newb Shader" Contributors
 
-**Important Note:** Redistribution of this resource pack with links other than the official ones provided by the creator is strictly prohibited.
+This compiled "Newb Shader" resource pack (source code: https://github.com/devendrn/newb-x-mcbe under MIT License) is licensed under CC BY-ND 4.0 (https://creativecommons.org/licenses/by-nd/4.0/). Redistribute only unmodified copies with proper attribution to "Newb Shader" and variant creators (if any). Do not distribute derivatives.
+
+You can compile the shader from source and distribute the result under your own terms (compatible with the MIT License).
+
+Contact (Discord Server): https://discord.gg/newb-community-844591537430069279
 ''' # %a = authors
 credits = '''
 '''
@@ -25,9 +30,43 @@ credits = '''
 # right-most subpack is enabled by default
 
 [[subpack]]
+define = "ROUNDED_CLOUDS"
+materials = ["Clouds"]
+description = '''
+Rounded Clouds
+'''
+
+[[subpack]]
+define = "BOX_CLOUDS"
+materials = ["Clouds", "RenderChunk"]
+description = '''
+Box Clouds
+'''
+
+[[subpack]]
+define = "NO_WAVE_NO_FOG"
+materials = ["RenderChunk"]
+description = '''
+No fog and wave effects
+'''
+
+[[subpack]]
+define = "NO_FOG"
+materials = ["RenderChunk"]
+description = '''
+No fog effect
+'''
+
+[[subpack]]
+define = "NO_WAVE"
+materials = ["RenderChunk"]
+description = '''
+No wave effects
+'''
+
+[[subpack]]
 define = "DEFAULT"
 materials = []
 description = '''
 Default
 '''
-

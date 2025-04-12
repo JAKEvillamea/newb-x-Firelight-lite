@@ -3,7 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:zoglin",
-      "materials": { "default": "entity_emissive_alpha" },
+      "materials": { "default": "spider" },
       "textures": {
         "default": "textures/entity/zoglin/zoglin"
       },
@@ -11,8 +11,8 @@
         "default": "geometry.hoglin"
       },
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 64
+        "base_color": "#c66e55",
+        "overlay_color": "#e6e6e6"
       },
       "scripts": {
         "pre_animation": [

@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:ender_crystal",
       "materials": {
-        "default": "entity_emissive_alpha"
+        "default": "enderman"
       },
       "textures": {
         "default": "textures/entity/endercrystal/endercrystal",

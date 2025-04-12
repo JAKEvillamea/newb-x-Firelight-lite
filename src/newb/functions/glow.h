@@ -1,6 +1,8 @@
 #ifndef GLOW_H
 #define GLOW_H
 
+#include "sky.h"
+
 vec3 glowDetect(vec4 diffuse) {
   // Texture alpha: diffuse.a
   // 252/255 = max glow
@@ -21,14 +23,13 @@ vec3 glowDetectC(sampler2D tex, vec2 uv) {
 
 vec3 nlGlow(sampler2D tex, vec2 uv, float shimmer) {
   vec3 glow = glowDetectC(tex, uv);
-
   #ifdef NL_GLOW_LEAK
     // glow leak is done by interpolating 8 surrounding pixels
     // c3 c4 c5
     // c2    c6
     // c1 c8 c7
-    const vec2 texSize = vec2(2048.0, 1024.0);
-    const vec2 offset = 1.0 / texSize;
+    vec2 texSize = vec2(textureSize(tex, 0));
+    vec2 offset = 1.0 / texSize;
 
     vec3 c1 = glowDetectC(tex, uv - offset);
     vec3 c2 = glowDetectC(tex, uv + offset*vec2(-1, 0));
@@ -62,16 +63,33 @@ vec3 nlGlow(sampler2D tex, vec2 uv, float shimmer) {
   #endif
 
   #ifdef NL_GLOW_SHIMMER
-    glow *= (0.3 + 0.9*shimmer);
+    glow *= shimmer;
   #endif
 
   return glow * NL_GLOW_TEX;
 }
 
+#ifdef NL_GLOW_SHIMMER
 float nlGlowShimmer(vec3 cPos, float t) {
-  float d = dot(cPos, vec3(1.0,1.0,1.0));
-  float shimmer = sin(1.57*d + 0.7854*sin(d + 0.1*t) + 0.8*t);
-  return shimmer * shimmer;
+  float shimmer = sin(0.7*dot(cPos, vec3(1.0, 1.0, 1.0)) - NL_GLOW_SHIMMER_SPEED*t);
+  shimmer = sin(1.2*shimmer + 0.7*dot(cPos, vec3(-1.0, -1.0, 1.0)));
+  shimmer *= shimmer;
+  return mix(1.0, shimmer*shimmer, NL_GLOW_SHIMMER);
+}
+#endif
+
+vec4 nlGlint(vec4 light, vec4 layerUV, sampler2D glintTexture, vec4 glintColor, vec4 tileLightColor, vec4 albedo) {
+  float d = fract(dot(albedo.rgb, vec3_splat(4.0)));
+
+  vec4 tex1 = texture2D(glintTexture, fract(layerUV.xy+0.1*d)).rgbr;
+  vec4 tex2 = texture2D(glintTexture, fract(layerUV.zw+0.1*d)).rgbr;
+
+  vec4 glint = (tex1*tex1 + tex2*tex2) * tileLightColor * glintColor;
+
+  light.rgb = light.rgb*(1.0-0.4*glint.a) + 80.0*glint.rgb;
+  light.rgb += vec3(0.1,0.0,0.1) + 0.2*spectrum(sin(layerUV.x*9.42477 + 2.0*glint.a + d));
+
+  return light;
 }
 
 #endif

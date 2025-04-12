@@ -9,7 +9,7 @@
       },
       "textures": {
         "default": "textures/models/armor/netherite_1",
-        "enchanted": "textures/enchanted_item_glint"
+        "enchanted": "textures/misc/enchanted_item_glint"
       },
 	  "render_controllers": ["controller.render.custom_armor_ench", "controller.render.custom_armor_def"],
       "geometry": {
